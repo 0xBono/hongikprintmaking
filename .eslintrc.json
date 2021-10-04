@@ -11,7 +11,8 @@
       {},
       { "usePrettierrc": true }
     ],
-    "no-undef": "off"
+    "no-undef": "off",
+    "no-unused-vars": "warn"
   },
   "settings": {
     "next": {
