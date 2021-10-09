@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "next",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "warn",
+      {},
+      { "usePrettierrc": true }
+    ],
+    "no-undef": "off",
+    "no-unused-vars": "warn"
+  },
+  "settings": {
+    "next": {
+      "rootDir": "./src"
+    }
+  }
+}
