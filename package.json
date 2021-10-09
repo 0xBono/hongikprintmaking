@@ -1,30 +1,14 @@
 {
-  "name": "hongikprintmaking",
-  "version": "0.1.0",
+  "name": "root",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "matter-js": "^0.17.1",
-    "next": "11.1.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "sass": "^1.42.1"
+    "bootstrap": "yarn install; lerna bootstrap;",
+    "package:pages": "lerna run --scope pages-module --stream dev",
+    "package:render": "lerna run --scope render-module --stream start",
+    "start": "run-p --print-label package:*",
+    "build": "lerna run --parallel build"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^11.1.2",
-    "@types/matter-js": "^0.17.5",
-    "@types/react": "17.0.27",
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "fork-ts-checker-webpack-plugin": "^6.3.3",
-    "prettier": "^2.4.1",
-    "typescript": "4.4.3"
+    "lerna": "^4.0.0"
   }
 }
