@@ -1,0 +1,35 @@
+@keyframes carousel-transform {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-1600px * 6));
+  }
+}
+
+.wrap {
+  width: 100%;
+  padding: 16px 0;
+}
+
+.carousel-wrap {
+  display: flex;
+  animation-name: carousel-transform;
+  animation-duration: 320000ms;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+
+  & > span {
+    margin-right: 32px;
+  }
+}
+
+.carousel-item {
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+  white-space: nowrap;
+  font-family: 'neue-haas-grotesk-text', sans-serif;
+}
