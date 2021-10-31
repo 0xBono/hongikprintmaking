@@ -1,0 +1,23 @@
+@keyframes button-transform {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.dorr-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  &:hover {
+    animation-name: button-transform;
+    animation-duration: 32000ms;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+  }
+}
