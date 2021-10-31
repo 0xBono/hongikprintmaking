@@ -1,0 +1,110 @@
+.wrap {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.detail-section {
+  overflow: scroll;
+  padding: 0 16px;
+
+  .user-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+
+    .user-ko-name {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+      margin-right: 40px;
+    }
+
+    .user-en-name {
+      font-family: 'neue-haas-grotesk-text', sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+    }
+  }
+  .work-image {
+    width: 100%;
+    height: 400px;
+    background-color: #00000010;
+
+    &:nth-child(n+3):nth-child(-n+99) {
+      margin-top: 100px;
+    }
+  }
+}
+
+.work-info-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 32px;
+  
+  .work-info {
+    padding: 24px 0;
+    p {
+      display: flex;
+      padding: 8px 0;
+      .info-kind {
+        width: 104px;
+        font-family: 'neue-haas-grotesk-text', sans-serif;
+      }
+      span {
+        font-family: 'neue-haas-grotesk-text', sans-serif;
+      }
+    }
+  }
+}
+
+.user-sns-wrap {
+  display: flex;
+  flex-direction: column;
+
+  .user-sns {
+    font-family: 'neue-haas-grotesk-text', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+
+  .guest-book-button {
+    max-width: 146px;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 14px;
+    background: none;
+    font-family: 'neue-haas-grotesk-text', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-appearance: none;
+  }
+}
+
+.work-ko-description {
+  line-height: 48px;
+  font-family: 'Noto Sans KR', sans-serif;
+  padding: 16px 0;
+}
+
+.work-en-description {
+  line-height: 48px;
+  font-family: 'neue-haas-grotesk-text', sans-serif;
+  padding: 16px 0;
+}
+
+.item-section {
+  background-color: #00000010;
+  overflow: scroll;
+  padding: 16px;
+
+  .item-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 16px;
+    row-gap: 48px;
+    padding-bottom: 128px;
+  }
+}
