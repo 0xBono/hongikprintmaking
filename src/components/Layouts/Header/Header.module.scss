@@ -41,14 +41,27 @@
   justify-content: space-between;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
-  padding: 16px 14px;
+  padding: 16px;
 }
 
 .nav-item {
+  display: flex;
   font-size: 24px;
   font-weight: 400;
   font-style: normal;
   white-space: nowrap;
   font-family: 'neue-haas-grotesk-text', sans-serif;
   cursor: pointer;
+}
+
+.disable-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 100px;
+  border: 1px solid #000;
+  margin-right: 8px;
+}
+
+.active {
+  background-color: #000;
 }
