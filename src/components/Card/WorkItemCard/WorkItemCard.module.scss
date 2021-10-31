@@ -1,0 +1,17 @@
+.wrap {
+  max-width: 250px;
+  height: 170px;;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit:contain;
+}
+
+.user-name {
+  font-family: 'neue-haas-grotesk-text', sans-serif;
+  font-size: 12px;
+}

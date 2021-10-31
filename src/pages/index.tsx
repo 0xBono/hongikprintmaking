@@ -1,13 +1,7 @@
-import { GNBLayout } from 'components/Layouts';
+import dynamic from 'next/dynamic';
 
-const Index = () => {
-  return (
-    <GNBLayout>
-      <div>
-        <h1>Hello World</h1>
-      </div>
-    </GNBLayout>
-  );
-};
+const DynamicHome = dynamic(() => import('containers/Home/Home'), {
+  ssr: false,
+});
 
-export default Index;
+export default DynamicHome;
