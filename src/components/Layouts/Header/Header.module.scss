@@ -9,8 +9,9 @@
 }
 
 .wrap {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  padding: 16px 0;
 }
 
 .carousel-wrap {
@@ -20,6 +21,7 @@
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
+  padding: 16px 0;
 
   & > span {
     margin-right: 32px;
@@ -32,4 +34,21 @@
   font-style: normal;
   white-space: nowrap;
   font-family: 'neue-haas-grotesk-text', sans-serif;
+}
+
+.nav-wrap {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 16px 14px;
+}
+
+.nav-item {
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+  white-space: nowrap;
+  font-family: 'neue-haas-grotesk-text', sans-serif;
+  cursor: pointer;
 }

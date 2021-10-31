@@ -14,6 +14,12 @@ export const Header = () => {
           </span>
         ))}
       </div>
+      <div className={cx('nav-wrap')}>
+        <span className={cx('nav-item')}>HOME</span>
+        <span className={cx('nav-item')}>ABOUT</span>
+        <span className={cx('nav-item')}>WORK</span>
+        <span className={cx('nav-item')}>GAME</span>
+      </div>
     </header>
   );
 };
