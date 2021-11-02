@@ -2,6 +2,7 @@ import { GNBLayout } from 'components/Layouts';
 
 import classNames from 'classnames/bind';
 import styles from './Home.module.scss';
+import { useTheme } from 'next-themes';
 
 const cx = classNames.bind(styles);
 
@@ -13,9 +14,19 @@ const cx = classNames.bind(styles);
  * 기존 다른 페이지에서 export const 하는 방식과는 다른 export default 방식을 사용.
  */
 const Home = () => {
+  const { theme, setTheme } = useTheme();
+
+  const handleChangeTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
   return (
     <GNBLayout>
-      <img src="/assets/button/White_button.svg" alt="white-button" className={cx('dorr-button')} />
+      <img
+        src="/assets/button/White_button.svg"
+        alt="white-button"
+        className={cx('dorr-button')}
+        onClick={handleChangeTheme}
+      />
     </GNBLayout>
   );
 };
