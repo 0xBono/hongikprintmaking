@@ -39,8 +39,8 @@
 .nav-wrap {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
+  border-top: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
   padding: 16px;
 }
 
@@ -52,16 +52,17 @@
   white-space: nowrap;
   font-family: 'neue-haas-grotesk-text', sans-serif;
   cursor: pointer;
+  color: var(--black);
 }
 
 .disable-circle {
   width: 24px;
   height: 24px;
   border-radius: 100px;
-  border: 1px solid #000;
+  border: 1px solid var(--black);
   margin-right: 8px;
 }
 
 .active {
-  background-color: #000;
+  background-color: var(--black);
 }
