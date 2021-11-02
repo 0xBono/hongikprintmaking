@@ -1,0 +1,9 @@
+:root {
+  --white: #fff;
+  --black: #000;
+}
+
+[data-theme='dark'] {
+  --white: #000;
+  --black: #fff;
+}
