@@ -20,7 +20,7 @@ module.exports = {
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'src/styles')],
-    prependData: `@import "./lib/variables.scss";`,
+    // prependData: `@import "./lib/variables.scss";`,
   },
   trailingSlash: true,
 };

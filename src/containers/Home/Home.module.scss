@@ -10,8 +10,9 @@
 
 .dorr-button {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 16px;
+  right: 16px;
+  cursor: pointer;
 
   &:hover {
     animation-name: button-transform;

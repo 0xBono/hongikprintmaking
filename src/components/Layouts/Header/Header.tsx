@@ -32,7 +32,7 @@ export const Header = () => {
           />
           HOME
         </p>
-        <p className={cx('nav-item')}>
+        <p className={cx('nav-item')} onClick={() => handleRouterChange('about')}>
           <div
             className={cx('disable-circle', {
               active: 'about' === location,

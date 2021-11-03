@@ -3,11 +3,14 @@
   grid-template-columns: 50% 50%;
   width: 100%;
   height: 100%;
+  overflow: scroll;
 }
 
 .detail-section {
   overflow: scroll;
   padding: 0 16px;
+  background-color: #fff;
+  color: #000;
 
   .user-info {
     display: flex;
@@ -76,6 +79,7 @@
     border: 1px solid #000;
     border-radius: 14px;
     background: none;
+    color: #000;
     font-family: 'neue-haas-grotesk-text', sans-serif;
     font-size: 16px;
     cursor: pointer;
