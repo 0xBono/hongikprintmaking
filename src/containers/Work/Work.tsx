@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { GNBLayout } from 'components/Layouts';
 import { WorkItemCard } from 'components/Card';
 
@@ -7,6 +8,7 @@ import styles from './Work.module.scss';
 const cx = classNames.bind(styles);
 
 export const Work = () => {
+  const itemSectionRef = useRef<HTMLElement>(null);
   return (
     <GNBLayout>
       <div className={cx('wrap')}>
@@ -74,7 +76,7 @@ export const Work = () => {
             </>
           ))}
         </section>
-        <section className={cx('item-section')}>
+        <section ref={itemSectionRef} className={cx('item-section')}>
           <div className={cx('item-wrap')}>
             {Array.from(Array(32)).map((_, i) => (
               <WorkItemCard key={i} />
