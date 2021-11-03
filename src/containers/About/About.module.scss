@@ -1,0 +1,19 @@
+.wrap {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  padding: 16px;
+}
+
+.section {
+  height: 100%;
+  margin: 24px;
+
+  & > p {
+    font-size: 24px;
+    line-height: 48px;
+    margin-bottom: 24px;
+  }
+}
