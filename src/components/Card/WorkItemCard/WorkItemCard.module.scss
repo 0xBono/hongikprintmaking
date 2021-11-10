@@ -1,8 +1,14 @@
 .wrap {
-  max-width: 235px;
-  height: 135px;
-  border: 1px solid var(--black);
-  cursor: pointer;
+  // max-width: 235px;
+  // border: 1px solid var(--black);
+  // cursor: pointer;
+  min-width: calc((100% - 60px)/3);
+  height: calc((100% - 1px)/1.3);
+  float: left;
+  margin: 10px;
+  margin-top: 3px;
+  position: relative;
+  margin-bottom: -56px;
 }
 
 .card-image {
@@ -15,3 +21,4 @@
   font-family: 'neue-haas-grotesk-text', sans-serif;
   font-size: 12px;
 }
+

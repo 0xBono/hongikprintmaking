@@ -9,7 +9,8 @@ export const WorkItemCard = () => {
   const [mouseHover, setMouseHover] = useState<boolean>(false);
 
   useEffect(() => {
-    const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    const colorArr = ['#FFD238', '#FF8D00', '#AE621E', '#FFBEFE', '#B61BC0', '007D00', '1EC0EE'];
+    const randomColor = colorArr[Math.floor(Math.random() * 5)];
     setColor(randomColor);
   }, []);
   return (
