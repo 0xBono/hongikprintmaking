@@ -102,12 +102,12 @@
 .item-section {
   background-color: #00000010;
   overflow: scroll;
-  padding: 16px;
+  padding: 16px 21px;
 
   .item-wrap {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 16px;
+    column-gap: 24px;
     row-gap: 48px;
     padding-bottom: 128px;
   }
