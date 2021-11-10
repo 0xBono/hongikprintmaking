@@ -26,6 +26,7 @@ export const Work = () => {
           {Array.from(Array(8)).map((_, index) => (
             <>
               <div className={cx('work-image')} />
+              <p className={cx('work-image-caption')}>1 of 1</p>
               <div className={cx('work-info-wrap')}>
                 <div className={cx('work-info')}>
                   <p>
