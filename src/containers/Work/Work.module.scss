@@ -8,14 +8,13 @@
 
 .detail-section {
   overflow: scroll;
-  padding: 0 16px;
   background-color: #fff;
   color: #000;
 
   .user-info {
     display: flex;
     justify-content: space-between;
-    padding: 16px 0;
+    padding: 16px;
 
     .user-ko-name {
       font-family: 'Noto Sans KR', sans-serif;
@@ -47,7 +46,7 @@
   column-gap: 32px;
   
   .work-info {
-    padding: 24px 0;
+    padding: 24px 16px;
     p {
       display: flex;
       padding: 8px 0;
@@ -87,28 +86,31 @@
   }
 }
 
+.work-image-caption {
+  text-align: center;
+  font-size: 14px;
+  margin: 4px;
+}
+
 .work-ko-description {
   line-height: 48px;
   font-family: 'Noto Sans KR', sans-serif;
-  padding: 16px 0;
+  padding: 16px;
 }
 
 .work-en-description {
   line-height: 48px;
   font-family: 'neue-haas-grotesk-text', sans-serif;
-  padding: 16px 0;
+  padding: 16px;
 }
 
 .item-section {
   background-color: #00000010;
   overflow: scroll;
-  padding: 16px 21px;
+  padding: 10px 13px;
 
   .item-wrap {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 24px;
-    row-gap: 48px;
-    padding-bottom: 128px;
   }
 }
