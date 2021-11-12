@@ -1,6 +1,7 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { GNBLayout } from 'components/Layouts';
 import { WorkItemCard } from 'components/Card';
+import { useTheme } from 'next-themes';
 
 import classNames from 'classnames/bind';
 import styles from './Work.module.scss';
@@ -8,7 +9,16 @@ import styles from './Work.module.scss';
 const cx = classNames.bind(styles);
 
 export const Work = () => {
+  const { theme, setTheme } = useTheme();
+
+  const handleChangeTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
   const itemSectionRef = useRef<HTMLElement>(null);
+  const [scroll, setScroll] = useState<number>();
+  const handleScroll = () => {
+    setScroll(itemSectionRef.current?.scrollTop);
+  };
   return (
     <GNBLayout>
       <div className={cx('wrap')}>
@@ -77,7 +87,7 @@ export const Work = () => {
             </>
           ))}
         </section>
-        <section ref={itemSectionRef} className={cx('item-section')}>
+        <section ref={itemSectionRef} className={cx('item-section')} onScroll={handleScroll}>
           <div className={cx('item-wrap')}>
             {Array.from(Array(32)).map((_, i) => (
               <WorkItemCard key={i} />
@@ -85,6 +95,13 @@ export const Work = () => {
           </div>
         </section>
       </div>
+      <img
+        src="/assets/button/White_button.svg"
+        alt="white-button"
+        className={cx('dorr-button')}
+        style={{ transform: `rotate(${scroll}deg)` }}
+        onClick={handleChangeTheme}
+      />
     </GNBLayout>
   );
 };

@@ -1,14 +1,28 @@
+import { useRef, useState } from 'react';
 import { GNBLayout } from 'components/Layouts';
 
 import classNames from 'classnames/bind';
 import styles from './About.module.scss';
+import { useTheme } from 'next-themes';
 
 const cx = classNames.bind(styles);
 
 export const About = () => {
+  const { theme, setTheme } = useTheme();
+
+  const handleChangeTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
+
+  const itemSectionRef = useRef<any>(null);
+  const [scroll, setScroll] = useState<number>();
+
+  const handleScroll = () => {
+    setScroll(itemSectionRef.current?.scrollTop);
+  };
   return (
     <GNBLayout>
-      <div className={cx('wrap')}>
+      <div className={cx('wrap')} ref={itemSectionRef} onScroll={handleScroll}>
         <section className={cx('section')}>
           <p>도르르 Dorr</p>
           <p>
@@ -115,8 +129,31 @@ export const About = () => {
             손지민
           </p>
           <p>후원</p>
+          <p
+            style={{
+              display: 'flex',
+              justifyContent: 'flex-start',
+              flexWrap: 'wrap',
+              gap: '48px',
+              marginTop: '-24px',
+              paddingBottom: '48px',
+            }}
+          >
+            <img src="/assets/logo/200217.png" width="150" style={{ objectFit: 'contain' }} />
+            <img src="/assets/logo/630.png" width="150" />
+            <img src="/assets/logo/hana.svg" width="150" />
+            <img src="/assets/logo/print-studio.svg" width="150" />
+            <img src="/assets/logo/hangaram.svg" width="150" />
+          </p>
         </section>
       </div>
+      <img
+        src="/assets/button/White_button.svg"
+        alt="white-button"
+        className={cx('dorr-button')}
+        style={{ transform: `rotate(${scroll}deg)` }}
+        onClick={handleChangeTheme}
+      />
     </GNBLayout>
   );
 };
