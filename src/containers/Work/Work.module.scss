@@ -4,6 +4,10 @@
   width: 100%;
   height: 100%;
   overflow: scroll;
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
 }
 
 .detail-section {
@@ -37,6 +41,10 @@
     &:nth-child(n+3):nth-child(-n+99) {
       margin-top: 100px;
     }
+  }
+
+  @media (max-width: 768px) {
+    display: none;
   }
 }
 
