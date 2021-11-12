@@ -115,6 +115,22 @@ export const About = () => {
             손지민
           </p>
           <p>후원</p>
+          <p
+            style={{
+              display: 'flex',
+              justifyContent: 'flex-start',
+              flexWrap: 'wrap',
+              gap: '48px',
+              marginTop: '-24px',
+              paddingBottom: '48px',
+            }}
+          >
+            <img src="/assets/logo/200217.png" width="150" style={{ objectFit: 'contain' }} />
+            <img src="/assets/logo/630.png" width="150" />
+            <img src="/assets/logo/hana.svg" width="150" />
+            <img src="/assets/logo/print-studio.svg" width="150" />
+            <img src="/assets/logo/hangaram.svg" width="150" />
+          </p>
         </section>
       </div>
     </GNBLayout>
