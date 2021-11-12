@@ -122,3 +122,19 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+.dorr-button {
+  position: absolute;
+  width: 180px;
+  bottom: 16px;
+  right: 16px;
+  cursor: pointer;
+
+  &:hover {
+    animation-name: button-transform;
+    animation-duration: 32000ms;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+  }
+}

@@ -1,14 +1,28 @@
+import { useRef, useState } from 'react';
 import { GNBLayout } from 'components/Layouts';
 
 import classNames from 'classnames/bind';
 import styles from './About.module.scss';
+import { useTheme } from 'next-themes';
 
 const cx = classNames.bind(styles);
 
 export const About = () => {
+  const { theme, setTheme } = useTheme();
+
+  const handleChangeTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
+
+  const itemSectionRef = useRef<any>(null);
+  const [scroll, setScroll] = useState<number>();
+
+  const handleScroll = () => {
+    setScroll(itemSectionRef.current?.scrollTop);
+  };
   return (
     <GNBLayout>
-      <div className={cx('wrap')}>
+      <div className={cx('wrap')} ref={itemSectionRef} onScroll={handleScroll}>
         <section className={cx('section')}>
           <p>도르르 Dorr</p>
           <p>
@@ -133,6 +147,13 @@ export const About = () => {
           </p>
         </section>
       </div>
+      <img
+        src="/assets/button/White_button.svg"
+        alt="white-button"
+        className={cx('dorr-button')}
+        style={{ transform: `rotate(${scroll}deg)` }}
+        onClick={handleChangeTheme}
+      />
     </GNBLayout>
   );
 };
