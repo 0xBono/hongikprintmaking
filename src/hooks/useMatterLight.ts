@@ -26,7 +26,7 @@ export const useMatterLight = () => {
         },
       });
 
-      const playground_floor = Bodies.rectangle(0, clientHeight - 80, clientWidth * 10, 30, {
+      const playground_floor = Bodies.rectangle(0, clientHeight - 80, clientWidth * 10, 1, {
         isStatic: true,
       });
 
@@ -34,11 +34,11 @@ export const useMatterLight = () => {
         isStatic: true,
       });
 
-      const right_wall = Bodies.rectangle(1455, 0, 30, clientHeight * 10, {
+      const right_wall = Bodies.rectangle(clientWidth + 15, 0, 30, clientHeight * 10, {
         isStatic: true,
       });
 
-      const top_floor = Bodies.rectangle(0, -900, clientWidth * 10, 30, {
+      const top_floor = Bodies.rectangle(0, -500, clientWidth * 10, 1, {
         isStatic: true,
       });
 
