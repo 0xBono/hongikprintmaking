@@ -1,9 +1,12 @@
 import { GNBLayout } from 'components/Layouts';
 import { useTheme } from 'next-themes';
 import { useMatter } from 'hooks/useMatter';
+import { useMatterLight } from 'hooks/useMatterLight';
 
 import classNames from 'classnames/bind';
 import styles from './Home.module.scss';
+import { useCallback, useEffect, useState } from 'react';
+import router from 'next/router';
 
 const cx = classNames.bind(styles);
 
@@ -19,13 +22,19 @@ const Home = () => {
 
   const handleChangeTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
+    router.reload();
   };
 
-  const { scene } = useMatter();
+  const { darkScene } = useMatter();
+  const { lightScene } = useMatterLight();
 
   return (
     <GNBLayout>
-      <div ref={scene} style={{ width: '100%', height: '100%' }} />
+      {theme === 'dark' ? (
+        <div id="dark_canvas" ref={darkScene} style={{ width: '100%', height: '100%' }} />
+      ) : (
+        <div id="light_canvas" ref={lightScene} style={{ width: '100%', height: '100%' }} />
+      )}
       <img
         src="/assets/button/White_button.svg"
         alt="white-button"
